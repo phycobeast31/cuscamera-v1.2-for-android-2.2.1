@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        // Google's direct Maven host (maven.google.com redirects, which Gradle 3.3 can't follow)
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        // jcenter() is shut down; Maven Central replaces it
+        maven { url 'https://repo1.maven.org/maven2/' }
+    }
+    dependencies {
+        // Last Android Gradle Plugin line that supports minSdk 8 + Java 8 + Gradle 3.3
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+}
+allprojects {
+    repositories {
+        maven { url 'https://dl.google.com/dl/android/maven2/' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+    }
+}
